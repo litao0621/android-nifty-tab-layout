@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:text="add"/>
-    <com.litao.android.lib.TabLayout
+    <com.litao.android.lib.NiftyTabLayout
         android:id="@+id/tab1"
         android:layout_width="match_parent"
         android:layout_height="48dp"

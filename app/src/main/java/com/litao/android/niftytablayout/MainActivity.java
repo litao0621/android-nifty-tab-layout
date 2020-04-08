@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.litao.android.lib.TabLayout;
+import com.litao.android.lib.NiftyTabLayout;
 import com.litao.android.lib.badge.BadgeDrawable;
 
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private ViewPager mViewPager;
-    private TabLayout mTablayout;
+    private NiftyTabLayout mTablayout;
     private Button mButton;
 
     private MyPageAdapter adapter;
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         mViewPager.setAdapter(adapter);
 
         //设置滑块是否可滑动
-        mTablayout.setTabMode(TabLayout.MODE_AUTO);
+        mTablayout.setTabMode(NiftyTabLayout.MODE_AUTO);
 
 
 

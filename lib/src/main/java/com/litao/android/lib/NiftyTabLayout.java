@@ -87,7 +87,7 @@ import static androidx.viewpager.widget.ViewPager.SCROLL_STATE_SETTLING;
  * Created by litao on 2020/3/26.
  */
 @ViewPager.DecorView
-public class TabLayout extends HorizontalScrollView {
+public class NiftyTabLayout extends HorizontalScrollView {
 
     @Dimension(unit = Dimension.DP)
     private static final int DEFAULT_HEIGHT_WITH_TEXT_ICON = 72;
@@ -169,7 +169,7 @@ public class TabLayout extends HorizontalScrollView {
     public @interface LabelVisibility {}
 
     /**
-     * Gravity used to fill the {@link TabLayout} as much as possible. This option only takes effect
+     * Gravity used to fill the {@link NiftyTabLayout} as much as possible. This option only takes effect
      * when used with {@link #MODE_FIXED} on non-landscape screens less than 600dp wide.
      *
      * @see #setTabGravity(int)
@@ -178,7 +178,7 @@ public class TabLayout extends HorizontalScrollView {
     public static final int GRAVITY_FILL = 0;
 
     /**
-     * Gravity used to lay out the tabs in the center of the {@link TabLayout}.
+     * Gravity used to lay out the tabs in the center of the {@link NiftyTabLayout}.
      *
      * @see #setTabGravity(int)
      * @see #getTabGravity()
@@ -195,7 +195,7 @@ public class TabLayout extends HorizontalScrollView {
 
     /**
      * Indicator gravity used to align the tab selection indicator to the bottom of the {@link
-     * TabLayout}. This will only take effect if the indicator height is set via the custom indicator
+     * NiftyTabLayout}. This will only take effect if the indicator height is set via the custom indicator
      * drawable's intrinsic height (preferred), via the {@code tabIndicatorHeight} attribute
      * (deprecated), or via {@link #setSelectedTabIndicatorHeight(int)} (deprecated). Otherwise, the
      * indicator will not be shown. This is the default value.
@@ -208,7 +208,7 @@ public class TabLayout extends HorizontalScrollView {
 
     /**
      * Indicator gravity used to align the tab selection indicator to the center of the {@link
-     * TabLayout}. This will only take effect if the indicator height is set via the custom indicator
+     * NiftyTabLayout}. This will only take effect if the indicator height is set via the custom indicator
      * drawable's intrinsic height (preferred), via the {@code tabIndicatorHeight} attribute
      * (deprecated), or via {@link #setSelectedTabIndicatorHeight(int)} (deprecated). Otherwise, the
      * indicator will not be shown.
@@ -221,7 +221,7 @@ public class TabLayout extends HorizontalScrollView {
 
     /**
      * Indicator gravity used to align the tab selection indicator to the top of the {@link
-     * TabLayout}. This will only take effect if the indicator height is set via the custom indicator
+     * NiftyTabLayout}. This will only take effect if the indicator height is set via the custom indicator
      * drawable's intrinsic height (preferred), via the {@code tabIndicatorHeight} attribute
      * (deprecated), or via {@link #setSelectedTabIndicatorHeight(int)} (deprecated). Otherwise, the
      * indicator will not be shown.
@@ -234,7 +234,7 @@ public class TabLayout extends HorizontalScrollView {
 
     /**
      * Indicator gravity used to stretch the tab selection indicator across the entire height and
-     * width of the {@link TabLayout}. This will disregard {@code tabIndicatorHeight} and the
+     * width of the {@link NiftyTabLayout}. This will disregard {@code tabIndicatorHeight} and the
      * indicator drawable's intrinsic height, if set.
      *
      * @see #setSelectedTabIndicatorGravity(int)
@@ -373,15 +373,15 @@ public class TabLayout extends HorizontalScrollView {
     private TypeEvaluator textSizeEvaluator = new FloatEvaluator();
 
 
-    public TabLayout(@NonNull Context context) {
+    public NiftyTabLayout(@NonNull Context context) {
         this(context, null);
     }
 
-    public TabLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public NiftyTabLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, R.attr.ltTabStyle);
     }
 
-    public TabLayout(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public NiftyTabLayout(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         // Disable the Scroll Bar
@@ -662,7 +662,7 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     /**
-     * Add a {@link TabLayout.OnTabSelectedListener} that will be invoked when tab selection changes.
+     * Add a {@link NiftyTabLayout.OnTabSelectedListener} that will be invoked when tab selection changes.
      *
      * <p>Components that add a listener should take care to remove it when finished via {@link
      * #removeOnTabSelectedListener(OnTabSelectedListener)}.
@@ -674,7 +674,7 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     /**
-     * Add a {@link TabLayout.BaseOnTabSelectedListener} that will be invoked when tab selection
+     * Add a {@link NiftyTabLayout.BaseOnTabSelectedListener} that will be invoked when tab selection
      * changes.
      *
      * <p>Components that add a listener should take care to remove it when finished via {@link
@@ -691,7 +691,7 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     /**
-     * Remove the given {@link TabLayout.OnTabSelectedListener} that was previously added via {@link
+     * Remove the given {@link NiftyTabLayout.OnTabSelectedListener} that was previously added via {@link
      * #addOnTabSelectedListener(OnTabSelectedListener)}.
      *
      * @param listener listener to remove
@@ -701,7 +701,7 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     /**
-     * Remove the given {@link TabLayout.BaseOnTabSelectedListener} that was previously added via
+     * Remove the given {@link NiftyTabLayout.BaseOnTabSelectedListener} that was previously added via
      * {@link #addOnTabSelectedListener(BaseOnTabSelectedListener)}.
      *
      * @param listener listener to remove
@@ -712,7 +712,7 @@ public class TabLayout extends HorizontalScrollView {
         selectedListeners.remove(listener);
     }
 
-    /** Remove all previously added {@link TabLayout.OnTabSelectedListener}s. */
+    /** Remove all previously added {@link NiftyTabLayout.OnTabSelectedListener}s. */
     public void clearOnTabSelectedListeners() {
         selectedListeners.clear();
     }
@@ -859,7 +859,7 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     /**
-     * Returns the current mode used by this {@link TabLayout}.
+     * Returns the current mode used by this {@link NiftyTabLayout}.
      *
      * @see #setTabMode(int)
      */
@@ -892,12 +892,12 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     /**
-     * Set the indicator gravity used to align the tab selection indicator in the {@link TabLayout}.
+     * Set the indicator gravity used to align the tab selection indicator in the {@link NiftyTabLayout}.
      * You must set the indicator height via the custom indicator drawable's intrinsic height
      * (preferred), via the {@code tabIndicatorHeight} attribute (deprecated), or via {@link
      * #setSelectedTabIndicatorHeight(int)} (deprecated). Otherwise, the indicator will not be shown
      * unless gravity is set to {@link #INDICATOR_GRAVITY_STRETCH}, in which case it will ignore
-     * indicator height and stretch across the entire height and width of the {@link TabLayout}. This
+     * indicator height and stretch across the entire height and width of the {@link NiftyTabLayout}. This
      * defaults to {@link #INDICATOR_GRAVITY_BOTTOM} if not set.
      *
      * @param indicatorGravity one of {@link #INDICATOR_GRAVITY_BOTTOM}, {@link
@@ -914,7 +914,7 @@ public class TabLayout extends HorizontalScrollView {
 
     /**
      * Get the current indicator gravity used to align the tab selection indicator in the {@link
-     * TabLayout}.
+     * NiftyTabLayout}.
      *
      * @return one of {@link #INDICATOR_GRAVITY_BOTTOM}, {@link #INDICATOR_GRAVITY_CENTER}, {@link
      *     #INDICATOR_GRAVITY_TOP}, or {@link #INDICATOR_GRAVITY_STRETCH}
@@ -1078,7 +1078,7 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     /**
-     * The one-stop shop for setting up this {@link TabLayout} with a {@link ViewPager}.
+     * The one-stop shop for setting up this {@link NiftyTabLayout} with a {@link ViewPager}.
      *
      * <p>This is the same as calling {@link #setupWithViewPager(ViewPager, boolean)} with
      * auto-refresh enabled.
@@ -1090,7 +1090,7 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     /**
-     * The one-stop shop for setting up this {@link TabLayout} with a {@link ViewPager}.
+     * The one-stop shop for setting up this {@link NiftyTabLayout} with a {@link ViewPager}.
      *
      * <p>This method will link the given ViewPager and this TabLayout together so that changes in one
      * are automatically reflected in the other. This includes scroll state changes and clicks. The
@@ -1653,7 +1653,7 @@ public class TabLayout extends HorizontalScrollView {
         private @LabelVisibility int labelVisibilityMode = TAB_LABEL_VISIBILITY_LABELED;
 
         // TODO(b/76413401): make package private after the widget migration is finished
-        @Nullable public TabLayout parent;
+        @Nullable public NiftyTabLayout parent;
         // TODO(b/76413401): make package private after the widget migration is finished
         @NonNull public TabView view;
 
@@ -1982,7 +1982,7 @@ public class TabLayout extends HorizontalScrollView {
         }
     }
 
-    /** A {@link LinearLayout} containing {@link Tab} instances for use with {@link TabLayout}. */
+    /** A {@link LinearLayout} containing {@link Tab} instances for use with {@link NiftyTabLayout}. */
     public final class TabView extends LinearLayout {
         private Tab tab;
         private TextView textView;
@@ -2025,7 +2025,7 @@ public class TabLayout extends HorizontalScrollView {
             ((GradientDrawable) contentDrawable).setColor(Color.TRANSPARENT);
             background = contentDrawable;
             ViewCompat.setBackground(this, background);
-            TabLayout.this.invalidate();
+            NiftyTabLayout.this.invalidate();
         }
 
         /**
@@ -2056,7 +2056,7 @@ public class TabLayout extends HorizontalScrollView {
 
             if (changed) {
                 invalidate();
-                TabLayout.this.invalidate(); // Invalidate TabLayout, which draws mBaseBackgroundDrawable
+                NiftyTabLayout.this.invalidate(); // Invalidate TabLayout, which draws mBaseBackgroundDrawable
             }
         }
 
@@ -2995,7 +2995,7 @@ public class TabLayout extends HorizontalScrollView {
 
     /**
      * A {@link ViewPager.OnPageChangeListener} class which contains the necessary calls back to the
-     * provided {@link TabLayout} so that the tab position is kept in sync.
+     * provided {@link NiftyTabLayout} so that the tab position is kept in sync.
      *
      * <p>This class stores the provided TabLayout weakly, meaning that you can use {@link
      * ViewPager#addOnPageChangeListener(ViewPager.OnPageChangeListener)
@@ -3003,11 +3003,11 @@ public class TabLayout extends HorizontalScrollView {
      * leak.
      */
     public static class TabLayoutOnPageChangeListener implements ViewPager.OnPageChangeListener {
-        @NonNull private final WeakReference<TabLayout> tabLayoutRef;
+        @NonNull private final WeakReference<NiftyTabLayout> tabLayoutRef;
         private int previousScrollState;
         private int scrollState;
 
-        public TabLayoutOnPageChangeListener(TabLayout tabLayout) {
+        public TabLayoutOnPageChangeListener(NiftyTabLayout tabLayout) {
             tabLayoutRef = new WeakReference<>(tabLayout);
         }
 
@@ -3020,7 +3020,7 @@ public class TabLayout extends HorizontalScrollView {
         @Override
         public void onPageScrolled(
                 final int position, final float positionOffset, final int positionOffsetPixels) {
-            final TabLayout tabLayout = tabLayoutRef.get();
+            final NiftyTabLayout tabLayout = tabLayoutRef.get();
             if (tabLayout != null) {
                 // Only update the text selection if we're not settling, or we are settling after
                 // being dragged
@@ -3037,7 +3037,7 @@ public class TabLayout extends HorizontalScrollView {
 
         @Override
         public void onPageSelected(final int position) {
-            final TabLayout tabLayout = tabLayoutRef.get();
+            final NiftyTabLayout tabLayout = tabLayoutRef.get();
             if (tabLayout != null
                     && tabLayout.getSelectedTabPosition() != position
                     && position < tabLayout.getTabCount()) {
@@ -3057,10 +3057,10 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     /**
-     * A {@link TabLayout.OnTabSelectedListener} class which contains the necessary calls back to the
+     * A {@link NiftyTabLayout.OnTabSelectedListener} class which contains the necessary calls back to the
      * provided {@link ViewPager} so that the tab position is kept in sync.
      */
-    public static class ViewPagerOnTabSelectedListener implements TabLayout.OnTabSelectedListener {
+    public static class ViewPagerOnTabSelectedListener implements NiftyTabLayout.OnTabSelectedListener {
         private final ViewPager viewPager;
 
         public ViewPagerOnTabSelectedListener(ViewPager viewPager) {
@@ -3068,17 +3068,17 @@ public class TabLayout extends HorizontalScrollView {
         }
 
         @Override
-        public void onTabSelected(@NonNull TabLayout.Tab tab) {
+        public void onTabSelected(@NonNull NiftyTabLayout.Tab tab) {
             viewPager.setCurrentItem(tab.getPosition());
         }
 
         @Override
-        public void onTabUnselected(TabLayout.Tab tab) {
+        public void onTabUnselected(NiftyTabLayout.Tab tab) {
             // No-op
         }
 
         @Override
-        public void onTabReselected(TabLayout.Tab tab) {
+        public void onTabReselected(NiftyTabLayout.Tab tab) {
             // No-op
         }
     }
@@ -3107,7 +3107,7 @@ public class TabLayout extends HorizontalScrollView {
                 @NonNull ViewPager viewPager,
                 @Nullable PagerAdapter oldAdapter,
                 @Nullable PagerAdapter newAdapter) {
-            if (TabLayout.this.viewPager == viewPager) {
+            if (NiftyTabLayout.this.viewPager == viewPager) {
                 setPagerAdapter(newAdapter, autoRefresh);
             }
         }

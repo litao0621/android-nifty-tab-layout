@@ -111,6 +111,8 @@ public class NiftyTabLayout extends HorizontalScrollView {
 
     private static final int ANIMATION_DURATION = 300;
 
+    private static final float DEFAULT_INDICATOR_WIDTH_RATIO = 0.5F;
+
     private static final Pools.Pool<Tab> tabPool = new Pools.SynchronizedPool<>(16);
 
     /**
@@ -323,7 +325,7 @@ public class NiftyTabLayout extends HorizontalScrollView {
     /**
      * Indicator width ratio
      */
-    private float tabIndicatorWidthRatio = 0.5f;
+    private float tabIndicatorWidthRatio = DEFAULT_INDICATOR_WIDTH_RATIO;
     private final int requestedTabMinWidth;
     private final int requestedTabMaxWidth;
     private final int scrollableTabMinWidth;
@@ -453,6 +455,8 @@ public class NiftyTabLayout extends HorizontalScrollView {
 
         tabIndicatorAnimationDuration =
                 a.getInt(R.styleable.LTTabLayout_ltTabIndicatorAnimationDuration, ANIMATION_DURATION);
+
+        tabIndicatorWidthRatio = a.getFloat(R.styleable.LTTabLayout_ltTabIndicatorWidthRatio,DEFAULT_INDICATOR_WIDTH_RATIO);
 
         requestedTabMinWidth =
                 a.getDimensionPixelSize(R.styleable.LTTabLayout_ltTabMinWidth, INVALID_WIDTH);
@@ -2922,7 +2926,6 @@ public class NiftyTabLayout extends HorizontalScrollView {
                                 tabSelectedIndicator != null ? tabSelectedIndicator : defaultSelectionIndicator);
                 selectedIndicator.setBounds(indicatorLeft, indicatorTop, indicatorRight, indicatorBottom);
 
-                Log.d("litaoxxc","indicatorLeft = " + getLeftInterpolation(selectionOffset) + "indicatorRight = " + getRightInterpolation(indicatorRight));
                 if (selectedIndicatorPaint != null) {
                     if (VERSION.SDK_INT == VERSION_CODES.LOLLIPOP) {
                         // Drawable doesn't implement setTint in API 21

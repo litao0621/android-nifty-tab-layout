@@ -58,6 +58,8 @@
         <!-- The preferred padding along all edges of tabs. -->
         <attr format="dimension" name="ltTabPadding"/>
         <!-- Whether the selection text bold       -->
+
+        <attr format="float" name="ltTabIndicatorWidthRatio"/>
         <attr format="boolean" name="isSelectedTextBold"/>
         <attr format="float" name="selectedTabTextRadio"/>
         <attr format="float" name="unSelectedTabTextRadio"/>

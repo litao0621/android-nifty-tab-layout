@@ -19,7 +19,6 @@
         <item name="ltTabGravity">fill</item>
         <item name="ltTabMode">fixed</item>
         <item name="ltTabIndicatorFullWidth">false</item>
-        <item name="ltTabTextColor">@color/comm_text_h2_color</item>
         <item name="selectedTabTextRadio">1.0</item>
         <item name="unSelectedTabTextRadio">0.8</item>
         <item name="ltTabTextAppearance">@style/LTWidget.TabLayout.Tab</item>

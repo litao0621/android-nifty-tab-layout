@@ -18,6 +18,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.RectF;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Build;
@@ -460,7 +461,7 @@ public class TabLayout extends HorizontalScrollView {
         tabBackgroundResId = a.getResourceId(R.styleable.LTTabLayout_ltTabBackground, 0);
         contentInsetStart = a.getDimensionPixelSize(R.styleable.LTTabLayout_ltTabContentStart, 0);
         // noinspection WrongConstant
-        mode = a.getInt(R.styleable.LTTabLayout_ltTabMode, MODE_FIXED);
+        mode = a.getInt(R.styleable.LTTabLayout_ltTabMode, MODE_AUTO);
         tabGravity = a.getInt(R.styleable.LTTabLayout_ltTabGravity, GRAVITY_FILL);
         inlineLabel = a.getBoolean(R.styleable.LTTabLayout_ltTabInlineLabel, false);
         isSelectedTextBold = a.getBoolean(R.styleable.LTTabLayout_isSelectedTextBold,true);
@@ -2568,7 +2569,8 @@ public class TabLayout extends HorizontalScrollView {
                 textView.setScaleY(tabSize);
                 if (isSelectedTextBold) {
                     TextPaint paint = textView.getPaint();
-                    paint.setFakeBoldText(tabSize > criticalValue);
+//                    paint.setFakeBoldText(tabSize > criticalValue);
+                    paint.setTypeface(tabSize > criticalValue?Typeface.DEFAULT_BOLD : Typeface.DEFAULT);
                 }
             }
 

@@ -47,9 +47,6 @@
         <attr format="reference" name="ltTabTextAppearance"/>
         <!-- The default text color to be applied to tabs. -->
         <attr format="color" name="ltTabTextColor"/>
-        <!-- {@deprecated Instead, provide a ColorStateList to the tabTextColor attribute with a
-             selected color set.}  -->
-        <attr format="color" name="ltTabSelectedTextColor"/>
         <!-- The preferred padding along the start edge of tabs. -->
         <attr format="dimension" name="ltTabPaddingStart"/>
         <!-- The preferred padding along the top edge of tabs. -->

@@ -73,12 +73,13 @@ public class MainActivity extends AppCompatActivity {
         mTablayout.setupWithViewPager(mViewPager,false);
 
         mTablayout.addTab(mTablayout.newTab().setIcon(R.drawable.test_tab));
-//        mTablayout.addTab(mTablayout.newTab().setText("男生"));
+        mTablayout.addTab(mTablayout.newTab().setText("男生"));
         mTablayout.addTab(mTablayout.newTab().setText("女生"));
 
 
         list.add("12");
         list.add("234");
+        list.add("244");
 
         adapter.setData(list);
 

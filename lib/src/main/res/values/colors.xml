@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <!-- 一级文字 -->
+    <color name="comm_text_h1_color">#333333</color>
+    <!-- 二级文字 -->
+    <color name="comm_text_h2_color">#666666</color>
+
+    <color name="tab_selected_color">@color/comm_text_h1_color</color>
+    <color name="tab_unSelected_color">@color/comm_text_h2_color</color>
+
+    <color name="tab_badge_background">#FFFE4E4E</color>
+    <color name="tab_badge_text_color">#FFFFFFFF</color>
+</resources>

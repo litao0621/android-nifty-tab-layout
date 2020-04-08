@@ -1,0 +1,45 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="LTWidget.TabLayout" parent="android:Widget">
+        <item name="ltTabMaxWidth">@dimen/tab_max_width</item>
+        <item name="ltTabIndicatorAnimationDuration">300</item>
+        <item name="ltTabIndicatorColor">?attr/colorAccent</item>
+        <item name="ltTabIndicatorGravity">bottom</item>
+        <item name="ltTabIndicator">@drawable/tabs_default_indicator_shape</item>
+        <item name="ltTabPaddingStart">10dp</item>
+        <item name="ltTabPaddingEnd">10dp</item>
+        <item name="ltTabGravity">fill</item>
+        <item name="ltTabMode">fixed</item>
+        <item name="ltTabIndicatorFullWidth">false</item>
+        <item name="ltTabTextColor">@color/comm_text_h2_color</item>
+        <item name="selectedTabTextRadio">1.0</item>
+        <item name="unSelectedTabTextRadio">0.8</item>
+        <item name="ltTabTextAppearance">@style/LTWidget.TabLayout.Tab</item>
+        <item name="selectedTabTextColor">?attr/colorAccent</item>
+        <item name="unSelectedTabTextColor">@color/comm_text_h2_color</item>
+        <item name="selectedIconTabColor">@android:color/transparent</item>
+        <item name="unSelectedIconTabColor">@color/comm_text_h2_color</item>
+    </style>
+
+    <style name="LTWidget.TabLayout.Tab" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/comm_text_h1_color</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="LTWidget.TabLayout.Tab.Badge" parent="android:Widget">
+        <item name="ltBackgroundColor">@color/tab_badge_background</item>
+        <item name="ltMaxCharacterCount">3</item>
+        <item name="ltBadgeGravity">TOP_END</item>
+        <item name="ltBadgeTextColor">@color/tab_badge_text_color</item>
+    </style>
+
+</resources>

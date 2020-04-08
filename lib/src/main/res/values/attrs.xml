@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="reference" name="ltTabStyle"/>
+    <attr format="reference" name="ltBadgeStyle"/>
+
+    <declare-styleable name="LTTabLayout">
+        <attr format="color" name="ltTabIndicatorColor"/>
+        <attr format="dimension" name="ltTabIndicatorHeight"/>
+        <attr format="dimension" name="ltTabContentStart"/>
+        <attr format="reference" name="ltTabBackground"/>
+        <attr format="reference" name="ltTabIndicator"/>
+        <attr name="ltTabIndicatorGravity">
+            <!-- Align indicator to the bottom of this tab layout. -->
+            <enum name="bottom" value="0"/>
+            <!-- Align indicator along the center of this tab layout. -->
+            <enum name="center" value="1"/>
+            <!-- Align indicator to the top of this tab layout. -->
+            <enum name="top" value="2"/>
+            <!-- Stretch indicator to match the height and width of a tab item in this layout. -->
+            <enum name="stretch" value="3"/>
+        </attr>
+        <!-- Duration in milliseconds for the animation of the selection indicator from one tab item
+             to another. -->
+        <attr format="integer" name="ltTabIndicatorAnimationDuration"/>
+        <!-- Whether the selection indicator width should fill the full width of the tab item,
+             or if it should be fitted to the content of the tab text label. If no text label is
+             present, it will be set to the width of the icon or to a minimum width of 24dp. -->
+        <attr format="boolean" name="ltTabIndicatorFullWidth"/>
+        <!-- The behavior mode for the Tabs in this layout -->
+        <attr name="ltTabMode">
+            <enum name="scrollable" value="0"/>
+            <enum name="fixed" value="1"/>
+            <enum name="auto" value="2"/>
+        </attr>
+        <!-- Gravity constant for tabs. -->
+        <attr name="ltTabGravity">
+            <enum name="fill" value="0"/>
+            <enum name="center" value="1"/>
+        </attr>
+        <!-- Whether to display tab labels horizontally inline with icons, or underneath icons. -->
+        <attr format="boolean" name="ltTabInlineLabel"/>
+        <!-- The minimum width for tabs. -->
+        <attr format="dimension" name="ltTabMinWidth"/>
+        <!-- The maximum width for tabs. -->
+        <attr format="dimension" name="ltTabMaxWidth"/>
+        <!-- A reference to a TextAppearance style to be applied to tabs. -->
+        <attr format="reference" name="ltTabTextAppearance"/>
+        <!-- The default text color to be applied to tabs. -->
+        <attr format="color" name="ltTabTextColor"/>
+        <!-- {@deprecated Instead, provide a ColorStateList to the tabTextColor attribute with a
+             selected color set.}  -->
+        <attr format="color" name="ltTabSelectedTextColor"/>
+        <!-- The preferred padding along the start edge of tabs. -->
+        <attr format="dimension" name="ltTabPaddingStart"/>
+        <!-- The preferred padding along the top edge of tabs. -->
+        <attr format="dimension" name="ltTabPaddingTop"/>
+        <!-- The preferred padding along the end edge of tabs. -->
+        <attr format="dimension" name="ltTabPaddingEnd"/>
+        <!-- The preferred padding along the bottom edge of tabs. -->
+        <attr format="dimension" name="ltTabPaddingBottom"/>
+        <!-- The preferred padding along all edges of tabs. -->
+        <attr format="dimension" name="ltTabPadding"/>
+        <!-- Whether the selection text bold       -->
+        <attr format="boolean" name="isSelectedTextBold"/>
+        <attr format="float" name="selectedTabTextRadio"/>
+        <attr format="float" name="unSelectedTabTextRadio"/>
+        <attr format="color" name="selectedTabTextColor"/>
+        <attr format="color" name="unSelectedTabTextColor"/>
+        <attr format="color" name="selectedIconTabColor"/>
+        <attr format="color" name="unSelectedIconTabColor"/>
+    </declare-styleable>
+
+    <declare-styleable name="LTTabItem">
+        <!-- Text to display in the tab. -->
+        <attr name="android:text"/>
+        <!-- Icon to display in the tab. -->
+        <attr name="android:icon"/>
+        <!-- A reference to a layout resource to be displayed in the tab. -->
+        <attr name="android:layout"/>
+    </declare-styleable>
+
+    <declare-styleable name="LTBadge">
+        <attr format="color" name="ltBackgroundColor"/>
+        <attr format="color" name="ltBadgeTextColor"/>
+        <attr format="integer" name="ltMaxCharacterCount"/>
+        <attr format="integer" name="ltNumber"/>
+        <attr name="ltBadgeGravity">
+            <!-- Gravity.TOP | Gravity.END -->
+            <enum name="TOP_END" value="8388661"/>
+            <!-- Gravity.TOP | Gravity.START -->
+            <enum name="TOP_START" value="8388659"/>
+            <!-- Gravity.BOTTOM | Gravity.END -->
+            <enum name="BOTTOM_END" value="8388693"/>
+            <!-- Gravity.BOTTOM | Gravity.START -->
+            <enum name="BOTTOM_START" value="8388691"/>
+        </attr>
+    </declare-styleable>
+
+
+</resources>

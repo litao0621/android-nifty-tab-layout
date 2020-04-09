@@ -17,7 +17,7 @@
         <item name="ltTabPaddingStart">10dp</item>
         <item name="ltTabPaddingEnd">10dp</item>
         <item name="ltTabGravity">fill</item>
-        <item name="ltTabMode">fixed</item>
+        <item name="ltTabMode">auto</item>
         <item name="ltTabIndicatorFullWidth">false</item>
         <item name="ltTabTextAppearance">@style/LTWidget.TabLayout.Tab</item>
         <item name="selectedTabTextRadio">1.0</item>

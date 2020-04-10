@@ -43,6 +43,7 @@
         <attr format="dimension" name="ltTabMinWidth"/>
         <!-- The maximum width for tabs. -->
         <attr format="dimension" name="ltTabMaxWidth"/>
+        <attr format="dimension" name="ltIconTabHeight"/>
         <!-- A reference to a TextAppearance style to be applied to tabs. -->
         <attr format="reference" name="ltTabTextAppearance"/>
         <!-- The default text color to be applied to tabs. -->

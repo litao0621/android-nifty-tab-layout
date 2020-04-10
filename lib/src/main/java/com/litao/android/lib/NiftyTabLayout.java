@@ -321,6 +321,7 @@ public class NiftyTabLayout extends HorizontalScrollView {
     int unSelectedIconColor;
 
     int tabMaxWidth = Integer.MAX_VALUE;
+    int iconTabHeight;
 
     /**
      * Indicator width ratio
@@ -462,6 +463,8 @@ public class NiftyTabLayout extends HorizontalScrollView {
                 a.getDimensionPixelSize(R.styleable.LTTabLayout_ltTabMinWidth, INVALID_WIDTH);
         requestedTabMaxWidth =
                 a.getDimensionPixelSize(R.styleable.LTTabLayout_ltTabMaxWidth, INVALID_WIDTH);
+
+        iconTabHeight = a.getDimensionPixelSize(R.styleable.LTTabLayout_ltIconTabHeight,0);
         tabBackgroundResId = a.getResourceId(R.styleable.LTTabLayout_ltTabBackground, 0);
         contentInsetStart = a.getDimensionPixelSize(R.styleable.LTTabLayout_ltTabContentStart, 0);
         // noinspection WrongConstant
@@ -2280,6 +2283,10 @@ public class NiftyTabLayout extends HorizontalScrollView {
                     (ImageView)
                             LayoutInflater.from(getContext())
                                     .inflate(R.layout.layout_tab_icon, iconViewParent, false);
+            ViewGroup.LayoutParams params = iconView.getLayoutParams();
+            if (iconTabHeight != 0){
+                params.height = iconTabHeight;
+            }
             iconViewParent.addView(iconView, 0);
         }
 
@@ -2295,6 +2302,7 @@ public class NiftyTabLayout extends HorizontalScrollView {
                                     .inflate(R.layout.layout_tab_text, textViewParent, false);
             textViewParent.addView(textView);
         }
+
 
         @NonNull
         private FrameLayout createPreApi18BadgeAnchorRoot() {

@@ -72,7 +72,8 @@ public class MainActivity extends AppCompatActivity {
 
         mTablayout.setupWithViewPager(mViewPager,false);
 
-        mTablayout.addTab(mTablayout.newTab().setIcon(R.drawable.test_tab));
+        mTablayout.addTab(mTablayout.newTab().setIcon(R.drawable.bd_logo1));
+        mTablayout.addTab(mTablayout.newTab().setIcon(R.drawable.test_tab2));
         mTablayout.addTab(mTablayout.newTab().setText("男生"));
         mTablayout.addTab(mTablayout.newTab().setText("女生"));
 
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         list.add("12");
         list.add("234");
         list.add("244");
+        list.add("2344");
 
         adapter.setData(list);
 

@@ -31,6 +31,7 @@
     <style name="LTWidget.TabLayout.Tab" parent="TextAppearance.AppCompat.Button">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/comm_text_h1_color</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="textAllCaps">true</item>
     </style>
 

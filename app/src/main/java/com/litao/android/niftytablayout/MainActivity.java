@@ -72,12 +72,20 @@ public class MainActivity extends AppCompatActivity {
 
         mTablayout.setupWithViewPager(mViewPager,false);
 
+        mTablayout.addTab(mTablayout.newTab().setText("男生"));
+        mTablayout.addTab(mTablayout.newTab().setText("女生"));
+        mTablayout.addTab(mTablayout.newTab().setText("男生"));
+        mTablayout.addTab(mTablayout.newTab().setText("女生"));
         mTablayout.addTab(mTablayout.newTab().setIcon(R.drawable.bd_logo1));
         mTablayout.addTab(mTablayout.newTab().setIcon(R.drawable.test_tab2));
         mTablayout.addTab(mTablayout.newTab().setText("男生"));
         mTablayout.addTab(mTablayout.newTab().setText("女生"));
 
 
+        list.add("12a");
+        list.add("234a");
+        list.add("244a");
+        list.add("2344a");
         list.add("12");
         list.add("234");
         list.add("244");
@@ -94,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
         badge2.setVisible(true);
         badge2.setNumber(9999);
 
+        mViewPager.setCurrentItem(1,false);
 //        mTablayout.getTabAt(0).setIcon(R.drawable.test_tab).setText("");
 
     }

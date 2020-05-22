@@ -748,6 +748,18 @@ public class NiftyTabLayout extends HorizontalScrollView {
         return tab;
     }
 
+    /**
+     * 还要所有tab到默认状态
+     */
+    public void resetAllTabs(){
+        for (int i = 0; i < getTabCount(); i++) {
+            Tab tab = tabs.get(i);
+            resetNewTab(tab);
+            TextPaint paint = tab.view.textView.getPaint();
+            paint.setTypeface(Typeface.DEFAULT);
+        }
+    }
+
     // TODO(b/76413401): remove this method and just create the final field after the widget migration
     protected Tab createTabFromPool() {
         Tab tab = tabPool.acquire();

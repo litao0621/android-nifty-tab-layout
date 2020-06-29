@@ -113,6 +113,8 @@ public class NiftyTabLayout extends HorizontalScrollView {
 
     private static final float DEFAULT_INDICATOR_WIDTH_RATIO = 0.5F;
 
+    private static final boolean DEFAULT_ENABLE_TINT_INDICATOR = true;
+
     private static final Pools.Pool<Tab> tabPool = new Pools.SynchronizedPool<>(16);
 
     /**
@@ -322,6 +324,8 @@ public class NiftyTabLayout extends HorizontalScrollView {
 
     int tabMaxWidth = Integer.MAX_VALUE;
     int iconTabHeight;
+    boolean enableTintIndicator = DEFAULT_ENABLE_TINT_INDICATOR;
+
 
     /**
      * Indicator width ratio
@@ -481,6 +485,7 @@ public class NiftyTabLayout extends HorizontalScrollView {
 
         selectedIconColor = a.getColor(R.styleable.LTTabLayout_selectedIconTabColor, Color.TRANSPARENT);
         unSelectedIconColor = a.getColor(R.styleable.LTTabLayout_unSelectedIconTabColor, ContextCompat.getColor(getContext(), R.color.comm_text_h2_color));
+        enableTintIndicator = a.getBoolean(R.styleable.LTTabLayout_ltEnableTintIndicator,DEFAULT_ENABLE_TINT_INDICATOR);
 
         a.recycle();
 
@@ -2946,7 +2951,7 @@ public class NiftyTabLayout extends HorizontalScrollView {
                                 tabSelectedIndicator != null ? tabSelectedIndicator : defaultSelectionIndicator);
                 selectedIndicator.setBounds(indicatorLeft, indicatorTop, indicatorRight, indicatorBottom);
 
-                if (selectedIndicatorPaint != null) {
+                if (selectedIndicatorPaint != null && enableTintIndicator) {
                     if (VERSION.SDK_INT == VERSION_CODES.LOLLIPOP) {
                         // Drawable doesn't implement setTint in API 21
                         selectedIndicator.setColorFilter(

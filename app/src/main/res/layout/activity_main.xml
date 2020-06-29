@@ -17,7 +17,9 @@
         android:layout_height="48dp"
         android:background="#FFFFFF"
         app:ltIconTabHeight ="16dp"
-        app:isSelectedTextBold="true"/>
+        app:isSelectedTextBold="false"
+        app:ltTabTextAppearance="@style/TabStyle"
+        app:ltEnableTintIndicator="false"/>
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"

@@ -60,6 +60,7 @@
         <attr format="dimension" name="ltTabPadding"/>
         <!-- Whether the selection text bold       -->
 
+        <attr format="boolean" name="ltEnableTintIndicator"/>
         <attr format="float" name="ltTabIndicatorWidthRatio"/>
         <attr format="boolean" name="isSelectedTextBold"/>
         <attr format="float" name="selectedTabTextRadio"/>

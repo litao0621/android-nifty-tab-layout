@@ -9,8 +9,8 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 5
-        versionName "1.0.0-alpha05"
+        versionCode 6
+        versionName "1.0.0-alpha06"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
@@ -38,7 +38,7 @@ publish {
     userOrg = 'litao'
     groupId = 'com.litao.lib'
     artifactId = 'android-nifty-tab-layout'
-    publishVersion = '1.0.0-alpha05'
+    publishVersion = '1.0.0-alpha06'
     desc = 'widget tab layout'
     website = 'https://github.com/sd6352051/android-nifty-tab-layout'
 }

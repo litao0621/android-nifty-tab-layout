@@ -760,8 +760,6 @@ public class NiftyTabLayout extends HorizontalScrollView {
         for (int i = 0; i < getTabCount(); i++) {
             Tab tab = tabs.get(i);
             resetNewTab(tab);
-            TextPaint paint = tab.view.textView.getPaint();
-            paint.setTypeface(Typeface.DEFAULT);
         }
     }
 
@@ -2598,8 +2596,8 @@ public class NiftyTabLayout extends HorizontalScrollView {
                 textView.setScaleY(tabSize);
                 if (isSelectedTextBold) {
                     TextPaint paint = textView.getPaint();
-//                    paint.setFakeBoldText(tabSize > criticalValue);
-                    paint.setTypeface(tabSize > criticalValue?Typeface.DEFAULT_BOLD : Typeface.DEFAULT);
+                    paint.setFakeBoldText(tabSize > criticalValue);
+//                    paint.setTypeface(tabSize > criticalValue?Typeface.DEFAULT_BOLD : Typeface.DEFAULT);
                 }
             }
 

@@ -2795,7 +2795,7 @@ public class NiftyTabLayout extends HorizontalScrollView {
                 left = right = -1;
             }
 
-            if (selectedPosition < getChildCount() - 1) {
+            if (selectedPosition <= getChildCount() - 1) {
                 if (selectedTitle instanceof TabView) {
                     ((TabView) selectedTitle).updateTabColor(1 - selectionOffset);
                     ((TabView) selectedTitle).updateTabSize(1 - selectionOffset);

@@ -18,8 +18,8 @@
         android:background="#FFFFFF"
         app:ltIconTabHeight ="16dp"
         app:isSelectedTextBold="false"
-        app:ltTabTextAppearance="@style/TabStyle"
-        app:ltEnableTintIndicator="false"/>
+        app:ltTabMinWidth="0dp"
+        app:ltTabTextAppearance="@style/TabStyle"/>
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"

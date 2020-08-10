@@ -56,16 +56,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 //                mTablayout.getTabAt(0).setIcon(R.drawable.test_tab).setText("");
 //                adapter.addTab();
-                list.add("kkk");
-                adapter.setData(list);
-//                mTablayout.removeAllTabs();
-//                mTablayout.addTab(mTablayout.newTab().setText("男生"));
-//                mTablayout.addTab(mTablayout.newTab().setText("出版"));
-//                mTablayout.addTab(mTablayout.newTab().setText("女生"));
-//                mViewPager.setCurrentItem(1);
-
-                mTablayout.addTab(mTablayout.newTab().setIcon(R.drawable.test_tab));
-
+//                list.add("kkk");
+//                adapter.setData(list);
+////                mTablayout.removeAllTabs();
+////                mTablayout.addTab(mTablayout.newTab().setText("男生"));
+////                mTablayout.addTab(mTablayout.newTab().setText("出版"));
+////                mTablayout.addTab(mTablayout.newTab().setText("女生"));
+////                mViewPager.setCurrentItem(1);
+//
+//                mTablayout.addTab(mTablayout.newTab().setIcon(R.drawable.test_tab));
+                mTablayout.setTabTextColors(Color.BLUE,Color.GREEN);
             }
         });
 
@@ -102,8 +102,11 @@ public class MainActivity extends AppCompatActivity {
         badge2.setVisible(true);
         badge2.setNumber(9999);
 
-        mViewPager.setCurrentItem(1,false);
+        mViewPager.setCurrentItem(0,false);
 //        mTablayout.getTabAt(0).setIcon(R.drawable.test_tab).setText("");
+
+
+
 
     }
 

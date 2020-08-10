@@ -1027,12 +1027,12 @@ public class NiftyTabLayout extends HorizontalScrollView {
      *
      * @see #getTabTextColors()
      */
-    public void setTabTextColors(@Nullable ColorStateList textColor) {
-        if (tabTextColors != textColor) {
-            tabTextColors = textColor;
-            updateAllTabs();
-        }
-    }
+//    public void setTabTextColors(@Nullable ColorStateList textColor) {
+//        if (tabTextColors != textColor) {
+//            tabTextColors = textColor;
+//            updateAllTabs();
+//        }
+//    }
 
     /** Gets the text colors for the different states (normal, selected) used for the tabs. */
     @Nullable
@@ -1047,7 +1047,10 @@ public class NiftyTabLayout extends HorizontalScrollView {
      * @attr ref com.google.android.material.R.styleable#TabLayout_tabSelectedTextColor
      */
     public void setTabTextColors(int normalColor, int selectedColor) {
-        setTabTextColors(createColorStateList(normalColor, selectedColor));
+//        setTabTextColors(createColorStateList(normalColor, selectedColor));
+        this.selectedTextColor = selectedColor;
+        this.unSelectedTextColor = normalColor;
+        updateAllTabs();
     }
 
 
@@ -3142,6 +3145,8 @@ public class NiftyTabLayout extends HorizontalScrollView {
             this.autoRefresh = autoRefresh;
         }
     }
+
+
 
 
 

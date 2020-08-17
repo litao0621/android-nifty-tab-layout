@@ -49,6 +49,22 @@ public class MainActivity extends AppCompatActivity {
         //设置滑块是否可滑动
         mTablayout.setTabMode(NiftyTabLayout.MODE_AUTO);
 
+        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                mTablayout.setTabTextColors(Color.YELLOW,Color.BLUE);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
 
 
         mButton.setOnClickListener(new View.OnClickListener() {
@@ -65,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 ////                mViewPager.setCurrentItem(1);
 //
 //                mTablayout.addTab(mTablayout.newTab().setIcon(R.drawable.test_tab));
-                mTablayout.setTabTextColors(Color.BLUE,Color.GREEN);
+                mTablayout.setTabTextColors(Color.RED,Color.BLACK);
             }
         });
 

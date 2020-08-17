@@ -1050,7 +1050,15 @@ public class NiftyTabLayout extends HorizontalScrollView {
 //        setTabTextColors(createColorStateList(normalColor, selectedColor));
         this.selectedTextColor = selectedColor;
         this.unSelectedTextColor = normalColor;
-        updateAllTabs();
+//        updateAllTabs();
+        for (int i = 0, z = tabs.size(); i < z; i++) {
+            Tab tab = tabs.get(i);
+            if (tab.isSelected()){
+                tab.view.textView.setTextColor(selectedColor);
+            }else {
+                tab.view.textView.setTextColor(unSelectedTextColor);
+            }
+        }
     }
 
 
